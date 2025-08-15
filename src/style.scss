@@ -1,0 +1,83 @@
+html,
+body,
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  padding-block: 5px;
+  padding-inline: 5px;
+}
+
+#canvas {
+  &-main {
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      animation: spin 400ms infinite linear;
+      background-color: hsl(214 47% 95%);
+    }
+  }
+
+  &-minimap {
+    &-container {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      background-color: hsl(214 47% 90%);
+      pointer-events: none;
+    }
+  }
+}
+
+#canvas-main-container,
+#canvas-minimap-container {
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border-radius: 7px;
+}
+
+#canvas-main,
+#canvas-minimap {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  0% {
+    cursor: n-resize;
+  }
+
+  12.5% {
+    cursor: ne-resize;
+  }
+
+  25% {
+    cursor: e-resize;
+  }
+
+  37.5% {
+    cursor: se-resize;
+  }
+
+  50% {
+    cursor: s-resize;
+  }
+
+  62.5% {
+    cursor: sw-resize;
+  }
+
+  75% {
+    cursor: w-resize;
+  }
+
+  87.5% {
+    cursor: nw-resize;
+  }
+
+  100% {
+    cursor: n-resize;
+  }
+}
